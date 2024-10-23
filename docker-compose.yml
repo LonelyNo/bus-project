@@ -161,7 +161,7 @@ services:
     expose:
         - "8888"
     environment:
-        - PASSWORD=password
+        - JUPYTER_TOKEN=easy
     networks:
         - "spark-net"
     user: root
