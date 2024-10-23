@@ -160,6 +160,8 @@ services:
         - spark-master
     expose:
         - "8888"
+    environment:
+        - PASSWORD=password
     networks:
         - "spark-net"
     user: root
