@@ -137,7 +137,6 @@ services:
         - SPARK_WORKER_CORES=1
         - SPARK_WORKER_MEMORY=2g
         - NAMENODE_HOSTNAME=namenode
-        - "PYSPARK_DRIVER_PYTHON=usr/bin/python3"
 
   spark-worker-2:
     image: bde2020/spark-worker:3.0.1-hadoop3.2
@@ -154,7 +153,6 @@ services:
         - SPARK_WORKER_CORES=1
         - SPARK_WORKER_MEMORY=2g
         - NAMENODE_HOSTNAME=namenode
-        - "PYSPARK_DRIVER_PYTHON=usr/bin/python3"
   
   jupyter-notebook:
     container_name: jupyternb
@@ -165,7 +163,6 @@ services:
         - "8888"
     environment:
         - JUPYTER_TOKEN=password
-        - "PYSPARK_DRIVER_PYTHON=usr/bin/python3"
     networks:
         - "spark-net"
     user: root
